@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HZEQgclAV37A1pdLt84F62nAPBut99xbWNjP22aur4ydnanS1BSVonHRxEXdISZcQF25N22KwSiwZDEBkhOtxQ==",
+  "dgSpecHash": "RVsODog2du9ghVddiNDjyHuGOr84X9tGIrSMhStiyFRfsYGfTIjgpHy/OOPnZqQQQx9AQyIQsN5dm/TSDf8H1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bk296745\\Desktop\\NoteBook\\NoteBook\\TestLogic\\TestLogic.csproj",
+  "projectFilePath": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\IQ\\IQ-2\\bk296745\\GitHub\\AppProgObjetTP\\NoteBook\\TestLogic\\TestLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bk296745\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\bk296745\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

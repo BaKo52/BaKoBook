@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoteBook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="465" Width="800">
+    <Grid Width="800" OpacityMask="Black" Height="450">
+        <Button Content="Saisir les matières" HorizontalAlignment="Left" Margin="100,73,0,0" VerticalAlignment="Top" Width="100" Height="20"/>
+        <Button Content="Renter un examen" HorizontalAlignment="Right" Margin="0,68,100,0" VerticalAlignment="Top" Width="100" Height="20"/>
+        <Button Content="Afficher les moyennes" HorizontalAlignment="Center" Margin="0,400,0,0" VerticalAlignment="Top" Width="150" Height="20"/>
+        <Image Height="250" VerticalAlignment="Center" Width="250" HorizontalAlignment="Center" Source="/37-0_thumb.jpg" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-163.542"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>

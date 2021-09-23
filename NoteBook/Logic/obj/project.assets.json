@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bk296745\\Desktop\\NoteBook\\NoteBook\\Logic\\Logic.csproj",
+      "projectUniqueName": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\IQ\\IQ-2\\bk296745\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj",
       "projectName": "Logic",
-      "projectPath": "C:\\Users\\bk296745\\Desktop\\NoteBook\\NoteBook\\Logic\\Logic.csproj",
+      "projectPath": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\IQ\\IQ-2\\bk296745\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj",
       "packagesPath": "C:\\Users\\bk296745\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bk296745\\Desktop\\NoteBook\\NoteBook\\Logic\\obj\\",
+      "outputPath": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\IQ\\IQ-2\\bk296745\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

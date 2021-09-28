@@ -58,6 +58,8 @@ namespace Logic
 
         /// <summary>
         /// Méthode ajoutant une unité dans la liste des unités de l'agenda
+        /// Elle teste si une unité du même nom est déjà présente
+        /// Si c'est le cas elle throw une exception
         /// </summary>
         /// <param name="u">Unité à ajouter à la liste</param>
         public void AddUnit(Unit u)
@@ -78,6 +80,11 @@ namespace Logic
             {
                 throw new Exception("Cette unité est déjà dans votre agenda !");
             }
+        }
+
+        public void RemoveUnit(Unit u)
+        {
+            this.units.Remove(u);
         }
     }
 }

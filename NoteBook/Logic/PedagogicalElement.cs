@@ -41,5 +41,10 @@ namespace Logic
                 coef = value;
             }
         }
+
+        public override String ToString()
+        {
+            return this.name;
+        }
     }
 }

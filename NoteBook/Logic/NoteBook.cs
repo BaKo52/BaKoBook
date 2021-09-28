@@ -10,6 +10,9 @@ namespace Logic
     /// </summary>
     public class Notebook
     {
+        /// <summary>
+        /// COnstructeur de la classe Notebook
+        /// </summary>
         public Notebook()
         {
             this.exams = new List<Exam>();
@@ -37,15 +40,11 @@ namespace Logic
         private List<Unit> units;
 
         /// <summary>
-        /// Setter et getter de l'attribut units
+        /// Getter de l'attribut units
         /// </summary>
         public List<Unit> Units
         {
             get => units;
-            set
-            {
-                this.units = value;
-            }
         }
 
         /// <summary>
@@ -55,6 +54,30 @@ namespace Logic
         public Unit[] ListUnits()
         {
             return this.Units.ToArray();
+        }
+
+        /// <summary>
+        /// Méthode ajoutant une unité dans la liste des unités de l'agenda
+        /// </summary>
+        /// <param name="u">Unité à ajouter à la liste</param>
+        public void AddUnit(Unit u)
+        {
+            bool isALreadyIn = false;
+
+            foreach (Unit item in units)
+                if(item.Name == u.Name)
+                {
+                    isALreadyIn = true;
+                }
+
+            if (!isALreadyIn)
+            {
+                this.Units.Add(u);
+            }
+            else
+            {
+                throw new Exception("Cette unité est déjà dans votre agenda !");
+            }
         }
     }
 }

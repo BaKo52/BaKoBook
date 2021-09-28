@@ -45,6 +45,11 @@ namespace IHM
                 listBox.Items.Add(item);
         }
 
+        /// <summary>
+        /// Méthode ouvrant une nouvelle fenêtre permettant l'édition de l'unité
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void EditUnit(object sender, MouseButtonEventArgs e)
         {
             if(listBox.SelectedItem is Unit u)
@@ -54,6 +59,30 @@ namespace IHM
                 {
                     DrawUnits();
                 }
+            }
+        }
+
+        /// <summary>
+        /// Méthode ajoutant une unité à la liste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AddUnit(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Unit newUnit = new Unit();
+                EditElementWindow third = new EditElementWindow(newUnit);
+                if (third.ShowDialog() == true)
+                {
+                    note.AddUnit(newUnit);
+                    DrawUnits();
+                }
+            }
+            catch (Exception x)
+            {
+
+                MessageBox.Show(x.Message);
             }
         }
     }

@@ -42,3 +42,5 @@ C:\Users\bk296745\Desktop\NoteBook\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\IHM
 \\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\IHM.dll
 \\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\IHM.pdb
 \\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\IHM.genruntimeconfig.cache
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\EditUnitsWindow.g.cs
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\EditUnitsWindow.baml

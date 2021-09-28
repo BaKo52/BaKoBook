@@ -11,7 +11,7 @@ namespace TestLogic
         [Fact]
         public void TestListUnits()
         {
-            NoteBook nb = new NoteBook();
+            Notebook nb = new Notebook();
             Unit[] u = nb.ListUnits();
             Console.WriteLine(u);
             Assert.NotNull(u);

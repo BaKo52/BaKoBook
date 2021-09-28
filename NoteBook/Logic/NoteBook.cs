@@ -8,9 +8,9 @@ namespace Logic
     /// Classe représentant l'agenda de l'éléve.
     /// La classe principale qui regroupe tout
     /// </summary>
-    public class NoteBook
+    public class Notebook
     {
-        public NoteBook()
+        public Notebook()
         {
             this.exams = new List<Exam>();
             this.units = new List<Unit>();

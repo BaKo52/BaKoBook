@@ -7,8 +7,11 @@ namespace Logic
     /// <summary>
     /// Classe représentant les modules
     /// </summary>
-    public class Module:PedagogicalElement
+    public class Module : PedagogicalElement
     {
-        
+        public Module()
+        {
+
+        }
     }
 }

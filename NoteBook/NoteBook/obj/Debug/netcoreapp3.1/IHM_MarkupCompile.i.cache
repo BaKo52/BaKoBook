@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 \\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\App.xaml
-11407045341
+2-254702663
 
-5-763260192
+6-102236742
 1931088231493
-MainWindow.xaml;
+EditUnitsWindow.xaml;MainWindow.xaml;
 
-True
+False
 

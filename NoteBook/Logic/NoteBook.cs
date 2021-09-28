@@ -8,18 +8,23 @@ namespace Logic
     /// Classe représentant l'agenda de l'éléve.
     /// La classe principale qui regroupe tout
     /// </summary>
-    class NoteBook
+    public class NoteBook
     {
+        public NoteBook()
+        {
+            this.exams = new List<Exam>();
+            this.units = new List<Unit>();
+        }
+
         /// <summary>
         /// Liste des examens passé par l'élève
         /// </summary>
         private List<Exam> exams;
         /// <summary>
-        /// Setter et geter de l'attribut exams
+        /// Setter de l'attribut exams
         /// </summary>
         public List<Exam> Exams
         {
-            get => exams;
             set
             {
                 this.exams = value;
@@ -30,6 +35,7 @@ namespace Logic
         /// Liste des unités de l'élève
         /// </summary>
         private List<Unit> units;
+
         /// <summary>
         /// Setter et getter de l'attribut units
         /// </summary>
@@ -40,6 +46,15 @@ namespace Logic
             {
                 this.units = value;
             }
+        }
+
+        /// <summary>
+        /// Méthode retournant la liste des unités sous forme de tableau
+        /// </summary>
+        /// <returns>La liste des unités</returns>
+        public Unit[] ListUnits()
+        {
+            return this.Units.ToArray();
         }
     }
 }

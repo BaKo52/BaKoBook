@@ -7,7 +7,7 @@ namespace Logic
     /// <summary>
     /// Classe représenant un examens
     /// </summary>
-    class Exam
+    public class Exam
     {
         /// <summary>
         /// Professeur passant l'exament

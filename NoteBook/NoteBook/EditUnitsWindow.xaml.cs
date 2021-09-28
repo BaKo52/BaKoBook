@@ -44,5 +44,17 @@ namespace IHM
             foreach (var item in list)
                 listBox.Items.Add(item);
         }
+
+        private void EditUnit(object sender, MouseButtonEventArgs e)
+        {
+            if(listBox.SelectedItem is Unit u)
+            {
+                EditElementWindow third = new EditElementWindow(u);
+                if(third.ShowDialog() == true)
+                {
+                    DrawUnits();
+                }
+            }
+        }
     }
 }

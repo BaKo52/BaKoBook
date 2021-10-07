@@ -40,9 +40,9 @@ namespace IHM
         private void DrawUnits()
         {
             var list = note.ListUnits();
-            listBox.Items.Clear();
+            listBoxUnit.Items.Clear();
             foreach (var item in list)
-                listBox.Items.Add(item);
+                listBoxUnit.Items.Add(item);
         }
 
         /// <summary>
@@ -52,10 +52,10 @@ namespace IHM
         /// <param name="e"></param>
         private void EditUnit(object sender, MouseButtonEventArgs e)
         {
-            if(listBox.SelectedItem is Unit u)
+            if (listBoxUnit.SelectedItem is Unit u)
             {
                 EditElementWindow third = new EditElementWindow(u);
-                if(third.ShowDialog() == true)
+                if (third.ShowDialog() == true)
                 {
                     DrawUnits();
                 }
@@ -82,6 +82,103 @@ namespace IHM
             catch (Exception x)
             {
 
+                MessageBox.Show(x.Message);
+            }
+        }
+
+        /// <summary>
+        /// Evenement du bouton enlevant l'unité sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RemoveUnit(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (listBoxUnit.SelectedItem is Unit unit)
+                {
+                    note.RemoveUnit(unit);
+                    DrawUnits();
+                }
+            }
+            catch (Exception x)
+            {
+                MessageBox.Show(x.Message);
+            }
+        }
+
+        /// <summary>
+        /// Méthode dessinant les modules dans la listBox
+        /// </summary>
+        private void DrawModules()
+        {
+            if(listBoxUnit.SelectedItem is Unit unit)
+            {
+                var list = unit.ListModules();
+                listBoxModules.Items.Clear();
+                foreach (Module m in list)
+                    listBoxModules.Items.Add(m);
+            }
+            else
+            {
+                listBoxModules.Items.Clear();
+            }
+        }
+
+        /// <summary>
+        /// Fonction mettant à jour l'affichage en fonction de l'unité sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SelectUnit(object sender, SelectionChangedEventArgs e)
+        {
+            DrawModules();
+        }
+
+        /// <summary>
+        /// Fonction ajoutant un module
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void AddModule(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Module newModule = new Module();
+                EditElementWindow third = new EditElementWindow(newModule);
+                if (third.ShowDialog() == true)
+                {
+                    if(this.listBoxUnit.SelectedItem is Unit unit)
+                    {
+                        unit.AddModules(newModule);
+                        DrawModules();
+                    }
+                }
+            }
+            catch (Exception x)
+            {
+
+                MessageBox.Show(x.Message);
+            }
+        }
+
+        /// <summary>
+        /// Fonction retirant un module
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RemoveModule(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (listBoxModules.SelectedItem is Module m && listBoxUnit.SelectedItem is Unit u)
+                {
+                    u.RemoveModule(m);
+                    DrawModules();
+                }
+            }
+            catch (Exception x)
+            {
                 MessageBox.Show(x.Message);
             }
         }

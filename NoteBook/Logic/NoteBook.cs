@@ -82,6 +82,10 @@ namespace Logic
             }
         }
 
+        /// <summary>
+        /// Méthode retirant une unité de la liste des unités
+        /// </summary>
+        /// <param name="u">Unités à enlever</param>
         public void RemoveUnit(Unit u)
         {
             this.units.Remove(u);

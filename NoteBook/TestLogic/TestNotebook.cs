@@ -8,6 +8,9 @@ namespace TestLogic
 {
     public class TestNotebook
     {
+        /// <summary>
+        /// Teste la fonction qui liste les unités
+        /// </summary>
         [Fact]
         public void TestListUnits()
         {
@@ -43,6 +46,28 @@ namespace TestLogic
             {
                 Assert.Equal("Cette unité est déjà dans votre agenda !", e.Message);
             }
+        }
+
+        /// <summary>
+        /// Teste la fonction qui enlève une unité
+        /// </summary>
+        [Fact]
+        public void TestRemoveUnit()
+        {
+            Notebook nb = new Notebook();
+            Unit u = new Unit();
+
+            u.Name = "Test";
+            u.Coef = 3;
+
+            nb.AddUnit(u);
+            Unit[] unit = nb.ListUnits();
+            Assert.Single(unit);
+            Assert.Equal(unit[0], u);
+
+            nb.RemoveUnit(u);
+
+            Assert.Empty(nb.ListUnits());
         }
     }
 }

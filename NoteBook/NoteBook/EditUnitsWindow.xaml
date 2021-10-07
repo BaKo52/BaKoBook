@@ -7,10 +7,17 @@
         mc:Ignorable="d"
         Title="EditUnitsWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="290,366,0,0" VerticalAlignment="Top" Width="46" Click="AddUnit"/>
-        <Button x:Name="removeButton" Content="Remove" HorizontalAlignment="Left" Margin="490,366,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="116,344,0,0" VerticalAlignment="Top" Width="46" Click="AddUnit"/>
+        <Button x:Name="removeButton" Content="Remove" HorizontalAlignment="Left" Margin="250,344,0,0" VerticalAlignment="Top" Click="RemoveUnit"/>
         <Label Content="Courses units :" HorizontalAlignment="Left" Margin="168,39,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="listBox" Margin="168,70,168,114" MouseDoubleClick="EditUnit"/>
+        <ListBox x:Name="listBoxUnit" Margin="95,70,473,114" MouseDoubleClick="EditUnit" SelectionChanged="SelectUnit"/>
+        <ListBox x:Name="listBoxModules" Margin="471,70,95,114"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="514,344,0,0" VerticalAlignment="Top" Click="AddModule"/>
+        <Button Content="Remove" HorizontalAlignment="Left" Margin="632,344,0,0" VerticalAlignment="Top" Click="RemoveModule"/>
+        <Label Content="Modules :&#xD;&#xA;" HorizontalAlignment="Left" Margin="544,39,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
 
     </Grid>
 </Window>

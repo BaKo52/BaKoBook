@@ -69,5 +69,16 @@ namespace TestLogic
 
             Assert.Empty(nb.ListUnits());
         }
+    
+        [Fact]
+        public void TestAddExam()
+        {
+            Notebook nb = new Notebook();
+            Exam e = new Exam();
+
+            nb.AddExam(e);
+
+            Assert.Single(nb.ListExam(), e);
+        }
     }
 }

@@ -44,7 +44,7 @@ namespace Logic
 
         public override String ToString()
         {
-            return this.name;
+            return this.name + '(' + this.coef + ')';
         }
     }
 }

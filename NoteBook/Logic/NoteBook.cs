@@ -90,5 +90,36 @@ namespace Logic
         {
             this.units.Remove(u);
         }
+
+        /// <summary>
+        /// Fonction retournant un tableau contenant tout les examens de l'élève peut importe l'unit
+        /// </summary>
+        /// <returns></returns>
+        public Module[] ListModules()
+        {
+            List<Module> lm = new List<Module>();
+            foreach (Unit u in units)
+                foreach (Module m in u.ListModules())
+                    lm.Add(m);
+            return lm.ToArray();
+        }
+
+        /// <summary>
+        /// Fonction ajoutant un examen à la liste d'examen
+        /// </summary>
+        /// <param name="e"></param>
+        public void AddExam(Exam e)
+        {
+            this.exams.Add(e);
+        }
+
+        /// <summary>
+        /// FOnction listant les exams de l'élève
+        /// </summary>
+        /// <returns></returns>
+        public Exam[] ListExam()
+        {
+            return exams.ToArray();
+        }
     }
 }

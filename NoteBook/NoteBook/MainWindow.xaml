@@ -8,7 +8,7 @@
         Title="Agenda !" Height="465" Width="800">
     <Grid Width="800" OpacityMask="Black" Height="450">
         <Button Content="Saisir les matières" HorizontalAlignment="Left" Margin="100,73,0,0" VerticalAlignment="Top" Width="100" Height="20" Click="GoEditUnits"/>
-        <Button Content="Renter un examen" HorizontalAlignment="Right" Margin="0,73,100,0" VerticalAlignment="Top" Width="100" Height="20"/>
+        <Button Content="Renter un examen" HorizontalAlignment="Right" Margin="0,73,100,0" VerticalAlignment="Top" Width="100" Height="20" Click="EnterExam"/>
         <Button Content="Afficher les moyennes" HorizontalAlignment="Center" Margin="0,368,0,0" VerticalAlignment="Top" Width="150" Height="20"/>
         <Image Height="250" VerticalAlignment="Top" Width="250" HorizontalAlignment="Left" Source="/img.png" RenderTransformOrigin="0.5,0.5" IsEnabled="False" Margin="266,77,0,0">
             <Image.RenderTransform>

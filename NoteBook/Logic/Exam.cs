@@ -28,7 +28,7 @@ namespace Logic
         /// <summary>
         /// Date et heure de l'examen
         /// </summary>
-        private DateTime dateExam;
+        private DateTime dateExam = DateTime.Now;
         /// <summary>
         /// Getter et setter de l'attribut dateExam
         /// </summary>
@@ -44,7 +44,7 @@ namespace Logic
         /// <summary>
         /// Coefficient de l'examen
         /// </summary>
-        private float coef;
+        private float coef = 1;
         /// <summary>
         /// Setter et getter de l'attribut coef
         /// </summary>
@@ -53,14 +53,15 @@ namespace Logic
             get => coef;
             set
             {
-                this.coef = value;
+                if (value > 0) coef = value;
+                else throw new Exception("Le coef doit être supérieur à 0");
             }
         }
 
         /// <summary>
         /// Attribut indiquant si l'élève était absent à cet examen
         /// </summary>
-        private Boolean isAbsent;
+        private Boolean isAbsent = true;
         /// <summary>
         /// Getter et setter de l'attribut isAbsent
         /// </summary>
@@ -76,7 +77,7 @@ namespace Logic
         /// <summary>
         /// Attribut indiquant la note qu'a obtenu l'étudiant à cet exament
         /// </summary>
-        private float note;
+        private float note = 0;
         /// <summary>
         /// Getter et setter de l'attribut note
         /// </summary>
@@ -85,7 +86,8 @@ namespace Logic
             get => note;
             set
             {
-                this.note = value;
+                if (value <= 20 && value >= 0) note = value;
+                else throw new Exception("La note doit être comprise entre 0 et 20.");
             }
         }
 
@@ -101,7 +103,8 @@ namespace Logic
             get => module;
             set
             {
-                this.module = value;
+                if (value != null) module = value;
+                else throw new Exception("Le module ne doit pas être nul !");
             }
         }
     }

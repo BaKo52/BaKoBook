@@ -54,7 +54,7 @@ namespace Logic
             set
             {
                 if (value > 0) coef = value;
-                else throw new Exception("Le coef doit être supérieur à 0");
+                else throw new Exception("Le coef doit être strictement supérieur à 0");
             }
         }
 

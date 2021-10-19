@@ -70,9 +70,15 @@ namespace IHM
             Close();
         }
 
+        /// <summary>
+        /// Fonction fermant la fenêtre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Cancel(object sender, RoutedEventArgs e)
         {
             Close();
         }
+
     }
 }

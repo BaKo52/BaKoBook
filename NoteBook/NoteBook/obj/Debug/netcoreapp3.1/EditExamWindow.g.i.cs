@@ -101,7 +101,7 @@ namespace IHM {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/IHM;V1.0.0.0;component/editexamwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/IHM;component/editexamwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EditExamWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -135,5 +135,41 @@ namespace TestLogic
             //on compare l'attendu avec le réel
             Assert.Equal(m, nb.ListModules());
         }
+
+        /// <summary>
+        /// Teste si la liste des exams se créé correctement
+        /// </summary>
+        [Fact]
+        public void TestListExam()
+        {
+            //on créé un notebook
+            Notebook nb = new Notebook();
+
+            //on créé 8 exams
+            Exam e1 = new Exam();
+            Exam e2 = new Exam();
+            Exam e3 = new Exam();
+            Exam e4 = new Exam();
+            Exam e5 = new Exam();
+            Exam e6 = new Exam();
+            Exam e7 = new Exam();
+            Exam e8 = new Exam();
+
+            //on ajoute les Exams aux units
+            nb.AddExam(e1);
+            nb.AddExam(e2);
+            nb.AddExam(e3);
+            nb.AddExam(e4);
+            nb.AddExam(e5);
+            nb.AddExam(e6);
+            nb.AddExam(e7);
+            nb.AddExam(e8);
+
+            //on créé le résultat attendu
+            Exam[] e = { e1, e2, e3, e4, e5, e6, e7, e8 };
+
+            //on compare l'attendu avec le réel
+            Assert.Equal(e, nb.ListExam());
+        }
     }
 }

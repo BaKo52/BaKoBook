@@ -57,5 +57,16 @@ namespace NoteBook
             EditExamWindow exam = new EditExamWindow(note);
             exam.Show();
         }
+
+        /// <summary>
+        /// Fonction listant les examens passés par l'élève
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ListExamsWindow(object sender, RoutedEventArgs e)
+        {
+            ListExamsWindow second = new ListExamsWindow(this.note);
+            second.Show();
+        }
     }
 }

@@ -16,5 +16,5 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 1931088231493
 EditElementWindow.xaml;EditExamWindow.xaml;EditUnitsWindow.xaml;ListExamsWindow.xaml;MainWindow.xaml;
 
-False
+True
 

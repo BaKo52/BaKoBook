@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\
 IHM
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\App.xaml
-5514798818
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\App.xaml
+5-1928481434
 
-72102592559
-1931088231493
+7-235006081
+193827894757
 EditElementWindow.xaml;EditExamWindow.xaml;EditUnitsWindow.xaml;ListExamsWindow.xaml;MainWindow.xaml;
 
 False

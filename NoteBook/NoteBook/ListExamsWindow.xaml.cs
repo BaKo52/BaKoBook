@@ -52,6 +52,12 @@ namespace IHM
             {
                 exams.Items.Add(e);
             }
+
+            scores.Items.Clear();
+            foreach (AvgScore avg in note.ComputeScores())
+            {
+                scores.Items.Add(avg);
+            }
         }
     }
 }

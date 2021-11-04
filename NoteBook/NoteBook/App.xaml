@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:NoteBook"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
-    </Application.Resources>
+		<Style TargetType="ListViewItem">
+			<Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+		</Style>
+	</Application.Resources>
 </Application>

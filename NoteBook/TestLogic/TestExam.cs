@@ -6,6 +6,9 @@ using Logic;
 
 namespace TestLogic
 {
+    /// <summary>
+    /// Classe testant la classe Exam
+    /// </summary>
     public class TestExam
     {
         /// <summary>

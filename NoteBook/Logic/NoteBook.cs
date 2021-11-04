@@ -121,5 +121,50 @@ namespace Logic
         {
             return exams.ToArray();
         }
+
+        /// <summary>
+        /// Fonction calculant la moyenne générale et celle des units
+        /// </summary>
+        /// <returns>La moyenne générale et la moyennes des units</returns>
+        public AvgScore[] ComputeScores()
+        {
+            List<AvgScore> listAvgs = new List<AvgScore>();
+            float score = 0;
+            float total = 0;
+            AvgScore averageScore = null;
+
+            foreach (Unit u in this.ListUnits())
+            {
+                total = 0;
+                score = 0;
+                foreach (AvgScore a in u.ComputeAverages(this.ListExam()))
+                {
+                    score += a.Average * a.PedagoElement.Coef;
+                    total += a.PedagoElement.Coef;
+                }
+                score = (float)(Math.Round(score / total, 2));
+                averageScore = new AvgScore(score, u);
+                listAvgs.Add(averageScore);
+            }
+
+            score = 0;
+            total = 0;
+
+            foreach (AvgScore avgs in listAvgs.ToArray())
+            {
+                score += avgs.Average * avgs.PedagoElement.Coef;
+                total += avgs.PedagoElement.Coef;
+            }
+
+            PedagogicalElement mg = new PedagogicalElement();
+            mg.Name = "Moyenne générale";
+            mg.Coef = 1;
+
+            score = (float) (Math.Round(score / total, 2));
+            averageScore = new AvgScore(score, mg);
+            listAvgs.Add(averageScore);
+
+            return listAvgs.ToArray();
+        }
     }
 }

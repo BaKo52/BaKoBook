@@ -13,6 +13,9 @@ namespace Logic
         /// Elément pédagogique que représente la moyenn
         /// </summary>
         private PedagogicalElement pe;
+        public PedagogicalElement PedagoElement {
+            get => pe;
+        }
         
         /// <summary>
         /// Variable contenant la moyenn

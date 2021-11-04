@@ -171,5 +171,125 @@ namespace TestLogic
             //on compare l'attendu avec le réel
             Assert.Equal(e, nb.ListExam());
         }
+
+        /// <summary>
+        /// Fonction testant la fonction ComputeScores
+        /// </summary>
+        [Fact]
+        public void TestComputeScores()
+        {
+            //On crée deux Unit et deux modules par Unit
+            Notebook n = new Notebook();
+            
+            Unit u1 = new Unit();
+            u1.Name = "Unité 1";
+            u1.Coef = 11;
+
+            Unit u2 = new Unit();
+            u2.Name = "Unité 2";
+            u2.Coef = 22;
+
+            Module m1 = new Module();
+            m1.Coef = 1;
+            m1.Name = "Module 1";
+
+            Module m2 = new Module();
+            m2.Coef = 2;
+            m2.Name = "Module 2";
+
+            Module m3 = new Module();
+            m3.Coef = 3;
+            m3.Name = "Module 3";
+
+            Module m4 = new Module();
+            m4.Coef = 4;
+            m4.Name = "Module 4";
+
+            //création du PedagogicalElement représentant la moyenne générale
+            PedagogicalElement mg = new PedagogicalElement();
+            mg.Name = "Moyenne générale";
+            mg.Coef = 1;
+
+            //on crée deux exams par module
+            //remplis avec des valeurs légales et aléatoires
+            Exam e1 = new Exam();
+            e1.Coef = 1;
+            e1.Note = 20;
+            e1.Module = m1;
+            Exam e2 = new Exam();
+            e2.Coef = 4;
+            e2.Note = 3;
+            e2.Module = m1;
+            Exam e3 = new Exam();
+            e3.Coef = 2;
+            e3.Note = 20;
+            e3.Module = m2;
+            Exam e4 = new Exam();
+            e4.Coef = 1;
+            e4.Note = 13;
+            e4.Module = m2;
+            Exam e5 = new Exam();
+            e5.Coef = 43;
+            e5.Note = 16;
+            e5.Module = m3;
+            Exam e6 = new Exam();
+            e6.Coef = 0.5f;
+            e6.Note = 18;
+            e6.Module = m3;
+            Exam e7 = new Exam();
+            e7.Coef = 6;
+            e7.Note = 3;
+            e7.Module = m4;
+            Exam e8 = new Exam();
+            e8.Coef = 4;
+            e8.Note = 1;
+            e8.Module = m4;
+
+            //on ajoute les examens au notebook
+            n.AddExam(e1);
+            n.AddExam(e2);
+            n.AddExam(e3);
+            n.AddExam(e4);
+            n.AddExam(e5);
+            n.AddExam(e6);
+            n.AddExam(e7);
+            n.AddExam(e8);
+
+            //On ajoute les modules à l'unité
+            u1.AddModules(m1);
+            u1.AddModules(m2);
+            u2.AddModules(m3);
+            u2.AddModules(m4);
+
+            //On ajoute les unitées au notebook
+            n.AddUnit(u1);
+            n.AddUnit(u2);
+
+            //On crée le résultat attendu en calculant les valeurs
+            List<AvgScore> listAvgs = new List<AvgScore>();
+
+            //moyenne de u1 = 13,91
+            listAvgs.Add(new AvgScore(13.91f, u1));
+            //moyenne de u2 = 8,12
+            listAvgs.Add(new AvgScore(8.12f, u2));
+            //moyenne générale = 10,05
+            listAvgs.Add(new AvgScore(10.05f, mg));
+
+            AvgScore[] listAvgsExpected = listAvgs.ToArray();
+            AvgScore[] listAvgsActual = n.ComputeScores();
+
+            //on teste la moyenne et l'élémeent pédagogique lié pour chaque objet
+            for (int i = 0; i < listAvgs.Count - 1; i++)
+            {
+                Assert.Equal(listAvgsExpected[i].Average, listAvgsActual[i].Average);
+
+                //ici on compare les ToString des éléments pédagogiques sinon le test ne marche pas pour la moyenne générale
+                //du fait que, de base, il n'existe pas de PedagogicalElement auquel on peut associer la moyenne générale
+                //on doit donc le créer dans notre fonction ComputeScores
+                //or on doit donc en créer un dans notre test pour le résultat attendu
+                //celui-ci sera différent d'un point de vue mémoire mais identique d'un point de vue logique
+                Assert.Equal(listAvgsExpected[i].PedagoElement.ToString(), listAvgsActual[i].PedagoElement.ToString());
+            }
+        }
     }
 }

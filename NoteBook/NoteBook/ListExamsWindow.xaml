@@ -5,27 +5,89 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM"
         mc:Ignorable="d"
-        Title="Liste des examens de l'élève" Height="450" Width="800">
-    <Grid>
-        <ListBox x:Name="exams" Margin="30,35,30,70" HorizontalContentAlignment="Stretch">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Content="{Binding DateExam}" />
-                        <Label Grid.Column="1" Content="{Binding Module.Name}" />
-                        <Label Grid.Column="2" Content="{Binding Teacher}" />
-                        <Label Grid.Column="3" Content="{Binding Score}" />
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-        <Button Content="Close" HorizontalAlignment="Center" Margin="0,391,0,0" VerticalAlignment="Top" Click="Close"/>
+        Title="Liste des examens de l'élève" Height="600" Width="800">
+	<Grid Width="800" Height="590" VerticalAlignment="Top">
+		<ListView x:Name="exams" ItemsSource="{Binding note}" Margin="30,30,30,0" HorizontalContentAlignment="Stretch" Height="250" VerticalAlignment="Top" Width="739" Grid.Row="1" >
+			<ListView.View>
+				<GridView>
+					<GridView.Columns>
+						<GridViewColumn Width="175px">
+							<GridViewColumn.Header>
+								<Label Content="Module" HorizontalContentAlignment="Center"/>
+							</GridViewColumn.Header>
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Label Content="{Binding Module.Name}" HorizontalAlignment="Center"/>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
 
-    </Grid>
+						<GridViewColumn Width="175px">
+							<GridViewColumn.Header>
+								<Label Content="Professeur" HorizontalContentAlignment="Center"/>
+							</GridViewColumn.Header>
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Label Content="{Binding Teacher}" HorizontalAlignment="Center"/>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+
+						<GridViewColumn Width="175px">
+							<GridViewColumn.Header>
+								<Label Content="Note" HorizontalContentAlignment="Center"/>
+							</GridViewColumn.Header>
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Label Content="{Binding Note}" HorizontalAlignment="Center"/>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+
+						<GridViewColumn Width="175px">
+							<GridViewColumn.Header>
+								<Label Content="Date" HorizontalContentAlignment="Center"/>
+							</GridViewColumn.Header>
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Label Content="{Binding DateExam}" HorizontalAlignment="Center"/>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+					</GridView.Columns>
+				</GridView>
+			</ListView.View>
+		</ListView>
+
+		<ListView x:Name="scores" ItemsSource="{Binding AvgScore}" Margin="30,300,30,95" HorizontalContentAlignment="Stretch" >
+			<ListView.View>
+				<GridView>
+					<GridView.Columns>
+						<GridViewColumn Width="365px">
+							<GridViewColumn.Header>
+								<Label Content="Element" HorizontalContentAlignment="Center"/>
+							</GridViewColumn.Header>
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Label Content="{Binding PedagoElement}" HorizontalAlignment="Center"/>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+
+						<GridViewColumn Width="365px">
+							<GridViewColumn.Header>
+								<Label Content="Moyenne" HorizontalContentAlignment="Center"/>
+							</GridViewColumn.Header>
+							<GridViewColumn.CellTemplate>
+								<DataTemplate>
+									<Label Content="{Binding Average}" HorizontalAlignment="Center"/>
+								</DataTemplate>
+							</GridViewColumn.CellTemplate>
+						</GridViewColumn>
+					</GridView.Columns>
+				</GridView>
+			</ListView.View>
+		</ListView>
+		<Button Content="Close" Margin="375,510,375,0" Click="Close" Height="40" VerticalAlignment="Top"/>
+	</Grid>
 </Window>

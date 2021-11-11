@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Logic\Logic.csproj" />
+    <ProjectReference Include="..\Storage\Storage.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Logic
@@ -8,10 +9,11 @@ namespace Logic
     /// Classe représentant l'agenda de l'éléve.
     /// La classe principale qui regroupe tout
     /// </summary>
+    [DataContract]
     public class Notebook
     {
         /// <summary>
-        /// COnstructeur de la classe Notebook
+        /// Constructeur de la classe Notebook
         /// </summary>
         public Notebook()
         {
@@ -22,6 +24,7 @@ namespace Logic
         /// <summary>
         /// Liste des examens passé par l'élève
         /// </summary>
+        [DataMember]
         private List<Exam> exams;
         /// <summary>
         /// Setter de l'attribut exams
@@ -37,6 +40,7 @@ namespace Logic
         /// <summary>
         /// Liste des unités de l'élève
         /// </summary>
+        [DataMember]
         private List<Unit> units;
 
         /// <summary>

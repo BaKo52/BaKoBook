@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Logic
@@ -7,11 +8,13 @@ namespace Logic
     /// <summary>
     /// Classe représenant un examens
     /// </summary>
+    [DataContract]
     public class Exam
     {
         /// <summary>
         /// Professeur passant l'exament
         /// </summary>
+        [DataMember]
         private String teacher;
         /// <summary>
         /// Getter et setter de l'attribut teacher;
@@ -28,6 +31,7 @@ namespace Logic
         /// <summary>
         /// Date et heure de l'examen
         /// </summary>
+        [DataMember]
         private DateTime dateExam = DateTime.Now;
         /// <summary>
         /// Getter et setter de l'attribut dateExam
@@ -44,6 +48,7 @@ namespace Logic
         /// <summary>
         /// Coefficient de l'examen
         /// </summary>
+        [DataMember]
         private float coef = 1;
         /// <summary>
         /// Setter et getter de l'attribut coef
@@ -61,6 +66,7 @@ namespace Logic
         /// <summary>
         /// Attribut indiquant si l'élève était absent à cet examen
         /// </summary>
+        [DataMember]
         private Boolean isAbsent = true;
         /// <summary>
         /// Getter et setter de l'attribut isAbsent
@@ -77,6 +83,7 @@ namespace Logic
         /// <summary>
         /// Attribut indiquant la note qu'a obtenu l'étudiant à cet exament
         /// </summary>
+        [DataMember]
         private float note = 0;
         /// <summary>
         /// Getter et setter de l'attribut note
@@ -94,6 +101,7 @@ namespace Logic
         /// <summary>
         /// Module auquel l'exam appartient
         /// </summary>
+        [DataMember]
         private Module module;
         /// <summary>
         /// Getter et Setter de l'attribut

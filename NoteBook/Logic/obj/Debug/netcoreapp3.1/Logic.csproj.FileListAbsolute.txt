@@ -25,3 +25,12 @@ C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcore
 C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcoreapp3.1\Logic.csproj.CoreCompileInputs.cache
 C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcoreapp3.1\Logic.dll
 C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcoreapp3.1\Logic.pdb
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\bin\Debug\netcoreapp3.1\Logic.deps.json
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\bin\Debug\netcoreapp3.1\Logic.dll
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\bin\Debug\netcoreapp3.1\Logic.pdb
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcoreapp3.1\Logic.csprojAssemblyReference.cache
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcoreapp3.1\Logic.csproj.CoreCompileInputs.cache
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcoreapp3.1\Logic.AssemblyInfoInputs.cache
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcoreapp3.1\Logic.AssemblyInfo.cs
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcoreapp3.1\Logic.dll
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Logic\obj\Debug\netcoreapp3.1\Logic.pdb

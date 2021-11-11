@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace Logic
 {
     /// <summary>
     /// Classe parent représentant les modules et les unités
     /// </summary>
+    [DataContract]
     public class PedagogicalElement
     {
         /// <summary>
         /// Nom de l'élément pédagogique
         /// </summary>
+        [DataMember]
         private String name;
         /// <summary>
         /// Setter et Getter de l'attribut name
@@ -27,6 +30,7 @@ namespace Logic
         /// Coefficient de l'élément pédagogique
         /// Doit être supérieur à 0
         /// </summary>
+        [DataMember]
         private float coef;
         /// <summary>
         /// Setter et Getter de l'attribut coef
@@ -37,7 +41,7 @@ namespace Logic
 
             set
             {
-                if (value <= 0) throw new Exception("The coef must be >0");
+                if (value <= 0) throw new Exception("The coef must be > 0");
                 coef = value;
             }
         }
@@ -45,6 +49,13 @@ namespace Logic
         public override String ToString()
         {
             return this.name + '(' + this.coef + ')';
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is PedagogicalElement element &&
+                   Name == element.Name &&
+                   Coef == element.Coef;
         }
     }
 }

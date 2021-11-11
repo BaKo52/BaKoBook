@@ -10,6 +10,7 @@
         "dependencies": {
           "Logic": "1.0.0",
           "Microsoft.NET.Test.Sdk": "16.9.4",
+          "Storage": "1.0.0",
           "coverlet.collector": "3.0.2",
           "xunit": "2.4.1",
           "xunit.runner.visualstudio": "2.4.3"
@@ -1094,6 +1095,14 @@
         "runtime": {
           "Logic.dll": {}
         }
+      },
+      "Storage/1.0.0": {
+        "dependencies": {
+          "Logic": "1.0.0"
+        },
+        "runtime": {
+          "Storage.dll": {}
+        }
       }
     }
   },
@@ -1748,6 +1757,11 @@
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
     },
     "Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Storage/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

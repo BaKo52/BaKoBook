@@ -141,34 +141,76 @@ namespace Logic
             {
                 total = 0;
                 score = 0;
-                foreach (AvgScore a in u.ComputeAverages(this.ListExam()))
+
+                AvgScore[] arrayAvgScore = u.ComputeAverages(this.ListExam());
+
+                if (arrayAvgScore.Length != 0)
                 {
-                    score += a.Average * a.PedagoElement.Coef;
-                    total += a.PedagoElement.Coef;
+                    foreach (AvgScore a in arrayAvgScore)
+                    {
+                        score += a.Average * a.PedagoElement.Coef;
+                        total += a.PedagoElement.Coef;
+                    }
+                    score = (float)(Math.Round(score / total, 2));
+                    averageScore = new AvgScore(score, u);
+                    listAvgs.Add(averageScore);
                 }
+            }
+
+            if(listAvgs.Count != 0)
+            {
+                score = 0;
+                total = 0;
+
+                foreach (AvgScore avgs in listAvgs.ToArray())
+                {
+                    score += avgs.Average * avgs.PedagoElement.Coef;
+                    total += avgs.PedagoElement.Coef;
+                }
+
+                PedagogicalElement mg = new PedagogicalElement();
+                mg.Name = "Moyenne générale";
+                mg.Coef = 1;
+
                 score = (float)(Math.Round(score / total, 2));
-                averageScore = new AvgScore(score, u);
+                averageScore = new AvgScore(score, mg);
                 listAvgs.Add(averageScore);
             }
 
-            score = 0;
-            total = 0;
+            return listAvgs.ToArray();
+        }
 
-            foreach (AvgScore avgs in listAvgs.ToArray())
+        /// <summary>
+        /// Fonction retournant true si obj est identique à this
+        /// </summary>
+        /// <param name="obj">objet à tester</param>
+        /// <returns>true si obj est identique à this, false sinon</returns>
+        public override bool Equals(object obj)
+        {
+            bool b = false;
+
+            //on vérifie que obj est de type NoteBook et a le même nombre d'unitées et d'examens que this
+            if (obj is Notebook note && ListExam().Length == note.ListExam().Length && ListUnits().Length == note.ListUnits().Length)
             {
-                score += avgs.Average * avgs.PedagoElement.Coef;
-                total += avgs.PedagoElement.Coef;
+                b = true;
+                Unit[] arrayUnit = ListUnits();
+                Unit u = null;
+                for (int i = 0; i < arrayUnit.Length; i++)
+                {
+                    u = arrayUnit[i];
+                    b &= units[i].Equals(u);
+                }
+
+                Exam[] arrayExam = ListExam();
+                Exam e = null;
+                for (int i = 0; i < arrayExam.Length; i++)
+                {
+                    e = arrayExam[i];
+                    b &= exams[i].Equals(e);
+                }
             }
 
-            PedagogicalElement mg = new PedagogicalElement();
-            mg.Name = "Moyenne générale";
-            mg.Coef = 1;
-
-            score = (float) (Math.Round(score / total, 2));
-            averageScore = new AvgScore(score, mg);
-            listAvgs.Add(averageScore);
-
-            return listAvgs.ToArray();
+            return b;
         }
     }
 }

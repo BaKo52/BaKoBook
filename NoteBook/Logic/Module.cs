@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Logic
@@ -37,6 +38,18 @@ namespace Logic
             }
 
             return avgs;
+        }
+
+        /// <summary>
+        /// Fonction testant l'égalité entre this et obj
+        /// </summary>
+        /// <param name="obj">obj à tester</param>
+        /// <returns>true les objets sont égaux, false sinon</returns>
+        public override bool Equals(object obj)
+        {
+            return obj is Module module &&
+                   Name == module.Name &&
+                   Coef == module.Coef;
         }
     }
 }

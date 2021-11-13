@@ -11,6 +11,19 @@
         "runtime": {
           "bin/placeholder/Logic.dll": {}
         }
+      },
+      "Storage/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Logic": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Storage.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Storage.dll": {}
+        }
       }
     }
   },
@@ -19,27 +32,33 @@
       "type": "project",
       "path": "../Logic/Logic.csproj",
       "msbuildProject": "../Logic/Logic.csproj"
+    },
+    "Storage/1.0.0": {
+      "type": "project",
+      "path": "../Storage/Storage.csproj",
+      "msbuildProject": "../Storage/Storage.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Logic >= 1.0.0"
+      "Logic >= 1.0.0",
+      "Storage >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bkott\\.nuget\\packages\\": {}
+    "C:\\Users\\Elève\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\NoteBook\\IHM.csproj",
+      "projectUniqueName": "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\NoteBook\\IHM.csproj",
       "projectName": "IHM",
-      "projectPath": "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\NoteBook\\IHM.csproj",
-      "packagesPath": "C:\\Users\\bkott\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\NoteBook\\obj\\",
+      "projectPath": "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\NoteBook\\IHM.csproj",
+      "packagesPath": "C:\\Users\\Elève\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\NoteBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\bkott\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Elève\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -52,8 +71,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj": {
-              "projectPath": "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj"
+            "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj": {
+              "projectPath": "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj"
+            },
+            "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Storage\\Storage.csproj": {
+              "projectPath": "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Storage\\Storage.csproj"
             }
           }
         }
@@ -84,7 +106,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

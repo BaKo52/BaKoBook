@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Logic;
+using Storage;
 
 namespace NoteBook
 {
@@ -28,101 +29,99 @@ namespace NoteBook
         public MainWindow()
         {
             InitializeComponent();
-            this.note = new Notebook();
 
-            //Unités, modules et examens réalisés pour la démo de l'application
+            storage = new JsonStorage("data.json");
+            note = storage.Load();
+
+            /*
+            //on créé un notebook
+            note = new Notebook();
+
+            //on créé 4 unit
             Unit u1 = new Unit();
-            u1.Name = "Unité 1";
-            u1.Coef = 11;
-
+            u1.Name = "Unit 1";
+            u1.Coef = 1;
             Unit u2 = new Unit();
-            u2.Name = "Unité 2";
-            u2.Coef = 22;
+            u2.Name = "Unit 2";
+            u2.Coef = 2;
+            Unit u3 = new Unit();
+            u3.Name = "Unit 3";
+            u3.Coef = 3;
+            Unit u4 = new Unit();
+            u4.Name = "Unit 4";
+            u4.Coef = 4;
 
-            Module m1 = new Module();
-            m1.Coef = 1;
-            m1.Name = "Module 1";
+            //on créé 8 modules (2 par units);
+            Module u1m1 = new Module();
+            u1m1.Coef = 11;
+            u1m1.Name = "Unit 1 Module 1";
+            Module u1m2 = new Module();
+            u1m2.Coef = 12;
+            u1m2.Name = "Unit 1 Module 2";
+            Module u2m1 = new Module();
+            u2m1.Coef = 21;
+            u2m1.Name = "Unit 2 Module 1";
+            Module u2m2 = new Module();
+            u2m2.Coef = 22;
+            u2m2.Name = "Unit 2 Module 2";
+            Module u3m1 = new Module();
+            u3m1.Coef = 31;
+            u3m1.Name = "Unit 3 Module 1";
+            Module u3m2 = new Module();
+            u3m2.Coef = 32;
+            u3m2.Name = "Unit 3 Module 2";
+            Module u4m1 = new Module();
+            u4m1.Coef = 41;
+            u4m1.Name = "Unit 4 Module 1";
+            Module u4m2 = new Module();
+            u4m2.Coef = 42;
+            u4m2.Name = "Unit 4 Module 2";
+            //on ajoute les modules aux units
+            u1.AddModules(u1m1);
+            u1.AddModules(u1m2);
+            u2.AddModules(u2m1);
+            u2.AddModules(u2m2);
+            u3.AddModules(u3m1);
+            u3.AddModules(u3m2);
+            u4.AddModules(u4m1);
+            u4.AddModules(u4m2);
 
-            Module m2 = new Module();
-            m2.Coef = 2;
-            m2.Name = "Module 2";
-
-            Module m3 = new Module();
-            m3.Coef = 3;
-            m3.Name = "Module 3";
-
-            Module m4 = new Module();
-            m4.Coef = 4;
-            m4.Name = "Module 4";
-
-            //on crée deux exams par module
-            //remplis avec des valeurs légales et aléatoires
-            Exam e1 = new Exam();
-            e1.Coef = 1;
-            e1.Note = 20;
-            e1.Module = m1;
-            e1.Teacher = "Brost";
-            Exam e2 = new Exam();
-            e2.Coef = 4;
-            e2.Note = 3;
-            e2.Module = m1;
-            e2.Teacher = "Simonet";
-            Exam e3 = new Exam();
-            e3.Coef = 2;
-            e3.Note = 20;
-            e3.Module = m2;
-            e3.Teacher = "Serier";
-            Exam e4 = new Exam();
-            e4.Coef = 1;
-            e4.Note = 13;
-            e4.Module = m2;
-            e4.Teacher = "Guidet";
-            Exam e5 = new Exam();
-            e5.Coef = 43;
-            e5.Note = 16;
-            e5.Module = m3;
-            e5.Teacher = "Rampacek";
-            Exam e6 = new Exam();
-            e6.Coef = 0.5f;
-            e6.Note = 18;
-            e6.Module = m3;
-            e6.Teacher = "Resin";
-            Exam e7 = new Exam();
-            e7.Coef = 6;
-            e7.Note = 3;
-            e7.Module = m4;
-            e7.Teacher = "Cherifi";
-            Exam e8 = new Exam();
-            e8.Coef = 4;
-            e8.Note = 1;
-            e8.Module = m4;
-            e8.Teacher = "Tupinier";
-
-            //on ajoute les examens au notebook
-            note.AddExam(e1);
-            note.AddExam(e2);
-            note.AddExam(e3);
-            note.AddExam(e4);
-            note.AddExam(e5);
-            note.AddExam(e6);
-            note.AddExam(e7);
-            note.AddExam(e8);
-
-            //On ajoute les modules à l'unité
-            u1.AddModules(m1);
-            u1.AddModules(m2);
-            u2.AddModules(m3);
-            u2.AddModules(m4);
-
-            //On ajoute les unitées au notebook
+            //on ajoute les units au notebook
             note.AddUnit(u1);
             note.AddUnit(u2);
+            note.AddUnit(u3);
+            note.AddUnit(u4);
+
+            Exam e1 = new Exam();
+            e1.Coef = 2;
+            e1.IsAbsent = false;
+            e1.DateExam = new DateTime(2021, 11, 12);
+            e1.Module = u3m2;
+            e1.Note = 20;
+            e1.Teacher = "Resin";
+
+            Exam e2 = new Exam();
+            e2.Coef = 2;
+            e2.IsAbsent = false;
+            e2.DateExam = new DateTime(2021, 11, 12);
+            e2.Module = u1m1;
+            e2.Note = 20;
+            e2.Teacher = "Resin";
+
+            note.AddExam(e1);
+            note.AddExam(e2);
+            */
         }
 
         /// <summary>
-        /// Attribut indiquand l'agenda de l'élève
+        /// Attribut indiquant l'agenda de l'élève
         /// </summary>
         private Logic.Notebook note;
+
+        /// <summary>
+        /// Attribut gérant le stockage des données
+        /// </summary>
+        private IStorage storage;
 
         /// <summary>
         /// Méthode permettant de modifier les unités
@@ -140,7 +139,7 @@ namespace NoteBook
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void EnterExam(object sender, RoutedEventArgs e)
+        private void GoCreateExam(object sender, RoutedEventArgs e)
         {
             EditExamWindow exam = new EditExamWindow(note);
             exam.Show();
@@ -151,10 +150,20 @@ namespace NoteBook
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void ListExamsWindow(object sender, RoutedEventArgs e)
+        private void GoListExams(object sender, RoutedEventArgs e)
         {
             ListExamsWindow second = new ListExamsWindow(this.note);
             second.Show();
+        }
+
+        /// <summary>
+        /// Fonction appelé lors de la fermeture du programme (ici la sauvegarde des données)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void onClose(object sender, EventArgs e)
+        {
+            storage.Save(note);
         }
     }
 }

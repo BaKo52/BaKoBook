@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "IHM/1.0.0": {
         "dependencies": {
-          "Logic": "1.0.0"
+          "Logic": "1.0.0",
+          "Storage": "1.0.0"
         },
         "runtime": {
           "IHM.dll": {}
@@ -17,6 +18,14 @@
       "Logic/1.0.0": {
         "runtime": {
           "Logic.dll": {}
+        }
+      },
+      "Storage/1.0.0": {
+        "dependencies": {
+          "Logic": "1.0.0"
+        },
+        "runtime": {
+          "Storage.dll": {}
         }
       }
     }
@@ -28,6 +37,11 @@
       "sha512": ""
     },
     "Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Storage/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -10,3 +10,15 @@ C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcor
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.csproj.CopyComplete
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.dll
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.pdb
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Storage.deps.json
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Storage.dll
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Storage.pdb
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Logic.dll
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Logic.pdb
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.csprojAssemblyReference.cache
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.AssemblyInfoInputs.cache
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.AssemblyInfo.cs
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.csproj.CoreCompileInputs.cache
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.csproj.CopyComplete
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.dll
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.pdb

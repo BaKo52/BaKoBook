@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj": {}
+    "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj": {
+    "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj",
-        "packagesPath": "C:\\Users\\bkott\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\obj\\",
+        "projectPath": "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\Logic.csproj",
+        "packagesPath": "C:\\Users\\Elève\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Elève\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\Logic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bkott\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elève\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Logic
@@ -7,11 +8,13 @@ namespace Logic
     /// <summary>
     /// Classe représentant les unités
     /// </summary>
+    [DataContract]
     public class Unit : PedagogicalElement
     {
         /// <summary>
         /// Liste des modules de l'unité
         /// </summary>
+        [DataMember]
         private List<Module> modules = new List<Module>();
         
         /// <summary>
@@ -49,7 +52,7 @@ namespace Logic
         /// <param name="m">Module à supprimer</param>
         public void RemoveModule(Module m)
         {
-            this.modules.Remove(m);
+            modules.Remove(m);
         }
 
         /// <summary>
@@ -60,13 +63,44 @@ namespace Logic
         public AvgScore[] ComputeAverages(Exam[] exams)
         {
             List<AvgScore> listAvgs = new List<AvgScore>();
+            AvgScore avg = null;
 
             foreach (Module m in modules)
             {
-                listAvgs.Add(m.ComputeAverage(exams));
+                avg = m.ComputeAverage(exams);
+
+                if (avg != null)
+                {
+                    listAvgs.Add(avg);
+                }
             }
 
             return listAvgs.ToArray();
+        }
+
+        public override bool Equals(object obj)
+        {
+            bool b = false;
+
+            //on vérifier que le type de l'objet est le bon et que le nombre de module correspond
+            if (obj is Unit unit && unit.ListModules().Length == ListModules().Length)
+            {
+                //on vérifie d'abord les attributs de hérités de PedagogicalElement
+                b = unit.Coef == Coef && unit.Name == Name;
+
+                //on vérifie ensuite les modules
+                Module[] arrayM = unit.ListModules();
+
+                Module m = null;
+
+                for (int i = 0; i < modules.Count; i++)
+                {
+                    m = modules[i];
+                    b &= m.Equals(arrayM[i]);
+                }
+            }
+
+            return b;
         }
     }
 }

@@ -112,3 +112,5 @@ C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netco
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\IHM.dll
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\IHM.pdb
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\IHM.genruntimeconfig.cache
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\bin\Debug\netcoreapp3.1\Storage.dll
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\bin\Debug\netcoreapp3.1\Storage.pdb

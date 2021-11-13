@@ -399,3 +399,5 @@ C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\TestLogic\obj\Debug\netc
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\TestLogic\obj\Debug\netcoreapp3.1\TestLogic.dll
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\TestLogic\obj\Debug\netcoreapp3.1\TestLogic.pdb
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\TestLogic\obj\Debug\netcoreapp3.1\TestLogic.genruntimeconfig.cache
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\TestLogic\bin\Debug\netcoreapp3.1\Storage.dll
+C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\TestLogic\bin\Debug\netcoreapp3.1\Storage.pdb

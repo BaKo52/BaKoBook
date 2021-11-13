@@ -63,6 +63,8 @@ namespace TestLogic
             js.Save(expected);
 
             Notebook actual = js.Load();
+
+            Assert.True(expected.Equals(actual));
         }
     }
 }

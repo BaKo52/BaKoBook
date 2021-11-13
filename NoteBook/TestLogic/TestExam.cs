@@ -89,5 +89,40 @@ namespace TestLogic
             e.IsAbsent = true;
             e.IsAbsent = false;
         }
+
+        /// <summary>
+        /// Fonction testant la fonction Equals de la classe Exam
+        /// </summary>
+        [Fact]
+        public void TestEquals()
+        {
+            // on créé les deux Exams ainsi que le module contenant les deux exams;
+            Module m = new Module();
+
+            Exam e1 = new Exam();
+            e1.Coef = 2;
+            e1.IsAbsent = false;
+            e1.DateExam = new DateTime(2021, 11, 12);
+            e1.Module = m;
+            e1.Note = 20;
+            e1.Teacher = "Resin";
+
+            Exam e2 = new Exam();
+            e2.Coef = 2;
+            e2.IsAbsent = false;
+            e2.DateExam = new DateTime(2021, 11, 12);
+            e2.Module = m;
+            e2.Note = 20;
+            e2.Teacher = "Resin";
+
+            //retourne vrai car les deux examens sont identiques
+            Assert.True(e1.Equals(e2));
+
+            //modifions un examen afin de les différencier
+            e2.Note = 2;
+
+            //retourne faux car un des deux exams est différent
+            Assert.False(e1.Equals(e2));
+        }
     }
 }

@@ -115,5 +115,21 @@ namespace Logic
                 else throw new Exception("Le module ne doit pas être nul !");
             }
         }
+
+        /// <summary>
+        /// Fonction testant si this et obj sont égaux
+        /// </summary>
+        /// <param name="obj">l'objet à tester</param>
+        /// <returns>true si égaux, false sinon</returns>
+        public override bool Equals(object obj)
+        {
+            return obj is Exam exam &&
+                   Teacher == exam.Teacher &&
+                   DateExam.Equals(exam.DateExam) &&
+                   Coef == exam.Coef &&
+                   IsAbsent == exam.IsAbsent &&
+                   Note == exam.Note &&
+                   Module.Equals(exam.Module);
+        }
     }
 }

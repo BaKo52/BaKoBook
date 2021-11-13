@@ -54,8 +54,8 @@ namespace Logic
         public override bool Equals(object obj)
         {
             return obj is PedagogicalElement element &&
-                   Name == element.Name &&
-                   Coef == element.Coef;
+                Coef == element.Coef &&
+                Name == element.Name;
         }
     }
 }

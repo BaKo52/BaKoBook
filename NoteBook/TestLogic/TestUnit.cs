@@ -87,6 +87,9 @@ namespace TestLogic
             Module m2 = new Module();
             m2.Coef = 3;
 
+            //on vérifie que sans examen ComputeAverages est vide
+            Assert.Empty(u.ComputeAverages(n.ListExam()));
+
             //on crée deux exams pour le m1 et deux pour m2
             Exam e1 = new Exam();
             e1.Coef = 1;
@@ -134,6 +137,81 @@ namespace TestLogic
                 Assert.Equal(listAvgsExpected[i].Average, listAvgsActual[i].Average);
                 Assert.Equal(listAvgsExpected[i].PedagoElement, listAvgsActual[i].PedagoElement);
             }
+        }
+
+        /// <summary>
+        /// Fonction testant la fonction Equals de la classe Unit
+        /// </summary>
+        [Fact]
+        public void TestEquals()
+        {
+            #region création des variables
+            //On crée deux Unit identiques et deux modules par Unit
+            Unit u1 = new Unit();
+            Module m11 = new Module();
+            m11.Coef = 2;
+            Module m12 = new Module();
+            m12.Coef = 3;
+
+            Unit u2 = new Unit();
+            Module m21 = new Module();
+            m21.Coef = 2;
+            Module m22 = new Module();
+            m22.Coef = 3;
+
+            //on crée deux exams pour le mx1 et deux pour mx2 et cela pour chaque unit
+            Exam e11 = new Exam();
+            e11.Coef = 1;
+            e11.Note = 20;
+            e11.Module = m11;
+            Exam e12 = new Exam();
+            e12.Coef = 4;
+            e12.Note = 3;
+            e12.Module = m11;
+            Exam e13 = new Exam();
+            e13.Coef = 2;
+            e13.Note = 20;
+            e13.Module = m12;
+            Exam e14 = new Exam();
+            e14.Coef = 1;
+            e14.Note = 13;
+            e14.Module = m12;
+
+            Exam e21 = new Exam();
+            e21.Coef = 1;
+            e21.Note = 20;
+            e21.Module = m21;
+            Exam e22 = new Exam();
+            e22.Coef = 4;
+            e22.Note = 3;
+            e22.Module = m21;
+            Exam e23 = new Exam();
+            e23.Coef = 2;
+            e23.Note = 20;
+            e23.Module = m22;
+            Exam e24 = new Exam();
+            e24.Coef = 1;
+            e24.Note = 13;
+            e24.Module = m22;
+
+            //On ajoute les modules aux unitées
+            u1.AddModules(m11);
+            u1.AddModules(m12);
+
+            u2.AddModules(m21);
+            u2.AddModules(m22);
+            #endregion
+
+            //devrait retourner vrai
+            Assert.True(u1.Equals(u2));
+
+            //modifions maintenant l'une des deux unit afin de les différencier pour cela créons un nouveau module et ajoutons le à l'Unit numéro 1 (u1)
+            Module intrus = new Module();
+            intrus.Coef = 2;
+            intrus.Name = "Intrus";
+            u1.AddModules(intrus);
+
+            Assert.False(u1.Equals(u2));
         }
     }
 }

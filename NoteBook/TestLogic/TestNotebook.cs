@@ -179,8 +179,11 @@ namespace TestLogic
         public void TestComputeScores()
         {
             //On crée deux Unit et deux modules par Unit
-            Notebook n = new Notebook();
-            
+            Notebook note = new Notebook();
+
+            //on vérifie que sans examen ComputeScores est vide
+            Assert.Empty(note.ComputeScores());
+
             Unit u1 = new Unit();
             u1.Name = "Unité 1";
             u1.Coef = 11;
@@ -246,14 +249,14 @@ namespace TestLogic
             e8.Module = m4;
 
             //on ajoute les examens au notebook
-            n.AddExam(e1);
-            n.AddExam(e2);
-            n.AddExam(e3);
-            n.AddExam(e4);
-            n.AddExam(e5);
-            n.AddExam(e6);
-            n.AddExam(e7);
-            n.AddExam(e8);
+            note.AddExam(e1);
+            note.AddExam(e2);
+            note.AddExam(e3);
+            note.AddExam(e4);
+            note.AddExam(e5);
+            note.AddExam(e6);
+            note.AddExam(e7);
+            note.AddExam(e8);
 
             //On ajoute les modules à l'unité
             u1.AddModules(m1);
@@ -262,8 +265,8 @@ namespace TestLogic
             u2.AddModules(m4);
 
             //On ajoute les unitées au notebook
-            n.AddUnit(u1);
-            n.AddUnit(u2);
+            note.AddUnit(u1);
+            note.AddUnit(u2);
 
             //On crée le résultat attendu en calculant les valeurs
             List<AvgScore> listAvgs = new List<AvgScore>();
@@ -276,7 +279,7 @@ namespace TestLogic
             listAvgs.Add(new AvgScore(10.05f, mg));
 
             AvgScore[] listAvgsExpected = listAvgs.ToArray();
-            AvgScore[] listAvgsActual = n.ComputeScores();
+            AvgScore[] listAvgsActual = note.ComputeScores();
 
             //on teste la moyenne et l'élémeent pédagogique lié pour chaque objet
             for (int i = 0; i < listAvgs.Count - 1; i++)
@@ -290,6 +293,203 @@ namespace TestLogic
                 //celui-ci sera différent d'un point de vue mémoire mais identique d'un point de vue logique
                 Assert.Equal(listAvgsExpected[i].PedagoElement.ToString(), listAvgsActual[i].PedagoElement.ToString());
             }
+        }
+
+        /// <summary>
+        /// Fonction testant la fonctio Equals
+        /// </summary>
+        [Fact]
+        public void TestEquals()
+        {
+            #region création des variables pour le premier Notebook
+            //On crée deux Unit et deux modules par Unit
+            Notebook n1 = new Notebook();
+
+            Unit u11 = new Unit();
+            u11.Name = "Unité 1";
+            u11.Coef = 11;
+
+            Unit u12 = new Unit();
+            u12.Name = "Unité 2";
+            u12.Coef = 22;
+
+            Module m11 = new Module();
+            m11.Coef = 1;
+            m11.Name = "Module 1";
+
+            Module m12 = new Module();
+            m12.Coef = 2;
+            m12.Name = "Module 2";
+
+            Module m13 = new Module();
+            m13.Coef = 3;
+            m13.Name = "Module 3";
+
+            Module m14 = new Module();
+            m14.Coef = 4;
+            m14.Name = "Module 4";
+
+            //on crée deux exams par module
+            //remplis avec des valeurs légales et aléatoires
+            Exam e11 = new Exam();
+            e11.Coef = 1;
+            e11.Note = 20;
+            e11.Module = m11;
+            Exam e12 = new Exam();
+            e12.Coef = 4;
+            e12.Note = 3;
+            e12.Module = m11;
+            Exam e13 = new Exam();
+            e13.Coef = 2;
+            e13.Note = 20;
+            e13.Module = m12;
+            Exam e14 = new Exam();
+            e14.Coef = 1;
+            e14.Note = 13;
+            e14.Module = m12;
+            Exam e15 = new Exam();
+            e15.Coef = 43;
+            e15.Note = 16;
+            e15.Module = m13;
+            Exam e16 = new Exam();
+            e16.Coef = 0.5f;
+            e16.Note = 18;
+            e16.Module = m13;
+            Exam e17 = new Exam();
+            e17.Coef = 6;
+            e17.Note = 3;
+            e17.Module = m14;
+            Exam e18 = new Exam();
+            e18.Coef = 4;
+            e18.Note = 1;
+            e18.Module = m14;
+
+            //on ajoute les examens au notebook
+            n1.AddExam(e11);
+            n1.AddExam(e12);
+            n1.AddExam(e13);
+            n1.AddExam(e14);
+            n1.AddExam(e15);
+            n1.AddExam(e16);
+            n1.AddExam(e17);
+            n1.AddExam(e18);
+
+            //On ajoute les modules aux unités
+            u11.AddModules(m11);
+            u11.AddModules(m12);
+            u12.AddModules(m13);
+            u12.AddModules(m14);
+
+            //On ajoute les unités au notebook
+            n1.AddUnit(u11);
+            n1.AddUnit(u12);
+            #endregion
+
+            #region création des variables pour le second Notebook
+            //On crée deux Unit et deux modules par Unit
+            Notebook n2 = new Notebook();
+
+            Unit u21 = new Unit();
+            u21.Name = "Unité 1";
+            u21.Coef = 11;
+
+            Unit u22 = new Unit();
+            u22.Name = "Unité 2";
+            u22.Coef = 22;
+
+            Module m21 = new Module();
+            m21.Coef = 1;
+            m21.Name = "Module 1";
+
+            Module m22 = new Module();
+            m22.Coef = 2;
+            m22.Name = "Module 2";
+
+            Module m23 = new Module();
+            m23.Coef = 3;
+            m23.Name = "Module 3";
+
+            Module m24 = new Module();
+            m24.Coef = 4;
+            m24.Name = "Module 4";
+
+            //on crée deux exams par module
+            //remplis avec des valeurs légales et aléatoires
+            Exam e21 = new Exam();
+            e21.Coef = 1;
+            e21.Note = 20;
+            e21.Module = m21;
+            Exam e22 = new Exam();
+            e22.Coef = 4;
+            e22.Note = 3;
+            e22.Module = m21;
+            Exam e23 = new Exam();
+            e23.Coef = 2;
+            e23.Note = 20;
+            e23.Module = m22;
+            Exam e24 = new Exam();
+            e24.Coef = 1;
+            e24.Note = 13;
+            e24.Module = m22;
+            Exam e25 = new Exam();
+            e25.Coef = 43;
+            e25.Note = 16;
+            e25.Module = m23;
+            Exam e26 = new Exam();
+            e26.Coef = 0.5f;
+            e26.Note = 18;
+            e26.Module = m23;
+            Exam e27 = new Exam();
+            e27.Coef = 6;
+            e27.Note = 3;
+            e27.Module = m24;
+            Exam e28 = new Exam();
+            e28.Coef = 4;
+            e28.Note = 1;
+            e28.Module = m24;
+
+            //on ajoute les examens au notebook
+            n2.AddExam(e21);
+            n2.AddExam(e22);
+            n2.AddExam(e23);
+            n2.AddExam(e24);
+            n2.AddExam(e25);
+            n2.AddExam(e26);
+            n2.AddExam(e27);
+            n2.AddExam(e28);
+
+            //On ajoute les modules à l'unité
+            u21.AddModules(m21);
+            u21.AddModules(m22);
+            u22.AddModules(m23);
+            u22.AddModules(m24);
+
+            //On ajoute les unitées au notebook
+            n2.AddUnit(u21);
+            n2.AddUnit(u22);
+            #endregion
+
+            //retournes vrai car les deux Notebook sont identiques
+            Assert.True(n1.Equals(n2));
+
+            //on modifie un notebook pour les différencier (ici on va tester en ajoutant une unité et ensuite un examen)
+            Unit u = new Unit();
+            n1.AddUnit(u);
+
+            //retourne faux car les deux notebook sont différents
+            Assert.False(n1.Equals(n2));
+
+            //on enlève l'unité
+            n1.RemoveUnit(u);
+
+            //on reteste que les deux notebook soit bien toujours identique
+            Assert.True(n1.Equals(n2));
+
+            //on ajoute un examen afin de différencier sur les examens
+            n1.AddExam(new Exam());
+
+            //retournes faux car n1 a un examen de plus
+            Assert.False(n1.Equals(n2));
         }
     }
 }

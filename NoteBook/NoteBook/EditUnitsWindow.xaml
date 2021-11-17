@@ -5,20 +5,125 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM"
         mc:Ignorable="d"
-        Title="Editer les unités" Height="450" Width="800">
-    <Grid>
+        Title="Editer les unités" Height="450" Width="800" Background="#003366">
+    <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="addButton" Content="Add" HorizontalAlignment="Left" Margin="116,344,0,0" VerticalAlignment="Top" Width="46" Click="AddUnit" Height="20"/>
-        <Button x:Name="removeButton" Content="Remove" HorizontalAlignment="Left" Margin="250,344,0,0" VerticalAlignment="Top" Click="RemoveUnit" Height="20" Width="46"/>
-        <Label Content="Courses units :" HorizontalAlignment="Center" Margin="0,39,0,0" VerticalAlignment="Top" Height="26" Width="86"/>
-        <ListBox x:Name="listBoxUnit" Margin="95,70,76,114" MouseDoubleClick="EditUnit" SelectionChanged="SelectUnit"/>
-        <ListBox x:Name="listBoxModules" Margin="68,70,95,114" Grid.Column="1"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="110,344,0,0" VerticalAlignment="Top" Click="AddModule" Grid.Column="1" Height="20" Width="26"/>
-        <Button Content="Remove" HorizontalAlignment="Center" Margin="0,344,0,0" VerticalAlignment="Top" Click="RemoveModule" Grid.Column="1" Height="20" Width="46"/>
-        <Label Content="Modules :&#xD;&#xA;" HorizontalAlignment="Left" Margin="140,39,0,0" VerticalAlignment="Top" Height="26" Width="88" Grid.Column="1"/>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.125*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.25*"/>
+        </Grid.RowDefinitions>
+
+
+        <Viewbox Grid.Column="0" Grid.Row="0" Stretch="Uniform">
+            <Label Foreground="#ffa6d0" Content="Courses units :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Viewbox>
+        <ListBox Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" Grid.Column="0" Grid.Row="1" x:Name="listBoxUnit" MouseDoubleClick="EditUnit" SelectionChanged="SelectUnit" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Grid Grid.Column="0" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button BorderBrush="Transparent" Background="Transparent" Margin="15, 15, -15, 15" Grid.Column="0" x:Name="addButton" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="AddUnit">
+                <Viewbox Stretch="Uniform" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                    <Rectangle Width="16" Height="16">
+                        <Rectangle.Fill>
+                            <DrawingBrush>
+                                <DrawingBrush.Drawing>
+                                    <DrawingGroup>
+                                        <DrawingGroup.Children>
+                                            <GeometryDrawing Brush="#00FFFFFF" Geometry="F1M16,16L0,16 0,0 16,0z" />
+                                            <GeometryDrawing Brush="#FFF6F6F6" Geometry="F1M6.0003,-0.000199999999999534L6.0003,5.9998 0.000300000000000189,5.9998 0.000300000000000189,9.9998 6.0003,9.9998 6.0003,15.9998 10.0003,15.9998 10.0003,9.9998 16.0003,9.9998 16.0003,5.9998 10.0003,5.9998 10.0003,-0.000199999999999534z" />
+                                            <GeometryDrawing Brush="#FF424242" Geometry="F1M15,9L9,9 9,15 7,15 7,9 1,9 1,7 7,7 7,1 9,1 9,7 15,7z" />
+                                        </DrawingGroup.Children>
+                                    </DrawingGroup>
+                                </DrawingBrush.Drawing>
+                            </DrawingBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Viewbox>
+            </Button>
+            <Button BorderBrush="Transparent" Background="Transparent" Margin="-15, 15, 15, 15" Grid.Column="1" x:Name="removeButton" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="RemoveUnit">
+                <Viewbox Stretch="Uniform" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                    <Rectangle Width="16" Height="16">
+                        <Rectangle.Fill>
+                            <DrawingBrush>
+                                <DrawingBrush.Drawing>
+                                    <DrawingGroup>
+                                        <DrawingGroup.Children>
+                                            <GeometryDrawing Brush="#00FFFFFF" Geometry="F1M16,16L0,16 0,0 16,0z" />
+                                            <GeometryDrawing Brush="#FFF6F6F6" Geometry="F1M4,16C2.897,16,2,15.103,2,14L2,5 1,5 1,2 4,2C4,0.897,4.897,0,6,0L9,0C10.103,0,11,0.897,11,2L14,2 14,5 13,5 13,14C13,15.103,12.103,16,11,16z" />
+                                            <GeometryDrawing Brush="#FFEFEFF0" Geometry="F1M10,12L9,12 9,6 10,6z M8,12L7,12 7,6 8,6z M6,12L5,12 5,6 6,6z M4,14L11,14 11,4 4,4z" />
+                                            <GeometryDrawing Brush="#FF424242" Geometry="F1M11,4L4,4 4,14 11,14z M6,3L9,3 9,2 6,2z M13,3L13,4 12,4 12,14C12,14.552,11.552,15,11,15L4,15C3.448,15,3,14.552,3,14L3,4 2,4 2,3 5,3 5,2C5,1.448,5.448,1,6,1L9,1C9.552,1,10,1.448,10,2L10,3z M10,6L9,6 9,12 10,12z M8,6L7,6 7,12 8,12z M6,12L5,12 5,6 6,6z" />
+                                        </DrawingGroup.Children>
+                                    </DrawingGroup>
+                                </DrawingBrush.Drawing>
+                            </DrawingBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Viewbox>
+            </Button>
+        </Grid>
+
+
+        <Viewbox Grid.Column="1" Grid.Row="0" Stretch="Uniform">
+            <Label Foreground="#ffa6d0" Content="Modules :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Viewbox>
+        <ListBox Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" x:Name="listBoxModules" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button BorderBrush="Transparent" Background="Transparent" Margin="15, 15, -15, 15" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="AddModule">
+                <Viewbox Stretch="Uniform" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                    <Rectangle Width="16" Height="16">
+                        <Rectangle.Fill>
+                            <DrawingBrush>
+                                <DrawingBrush.Drawing>
+                                    <DrawingGroup>
+                                        <DrawingGroup.Children>
+                                            <GeometryDrawing Brush="#00FFFFFF" Geometry="F1M16,16L0,16 0,0 16,0z" />
+                                            <GeometryDrawing Brush="#FFF6F6F6" Geometry="F1M6.0003,-0.000199999999999534L6.0003,5.9998 0.000300000000000189,5.9998 0.000300000000000189,9.9998 6.0003,9.9998 6.0003,15.9998 10.0003,15.9998 10.0003,9.9998 16.0003,9.9998 16.0003,5.9998 10.0003,5.9998 10.0003,-0.000199999999999534z" />
+                                            <GeometryDrawing Brush="#FF424242" Geometry="F1M15,9L9,9 9,15 7,15 7,9 1,9 1,7 7,7 7,1 9,1 9,7 15,7z" />
+                                        </DrawingGroup.Children>
+                                    </DrawingGroup>
+                                </DrawingBrush.Drawing>
+                            </DrawingBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Viewbox>
+            </Button>
+
+            <Button BorderBrush="Transparent" Background="Transparent" Margin="-15, 15, 15, 15" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="RemoveModule">
+                <Viewbox Stretch="Uniform" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                    <Rectangle Width="16" Height="16">
+                        <Rectangle.Fill>
+                            <DrawingBrush>
+                                <DrawingBrush.Drawing>
+                                    <DrawingGroup>
+                                        <DrawingGroup.Children>
+                                            <GeometryDrawing Brush="#00FFFFFF" Geometry="F1M16,16L0,16 0,0 16,0z" />
+                                            <GeometryDrawing Brush="#FFF6F6F6" Geometry="F1M4,16C2.897,16,2,15.103,2,14L2,5 1,5 1,2 4,2C4,0.897,4.897,0,6,0L9,0C10.103,0,11,0.897,11,2L14,2 14,5 13,5 13,14C13,15.103,12.103,16,11,16z" />
+                                            <GeometryDrawing Brush="#FFEFEFF0" Geometry="F1M10,12L9,12 9,6 10,6z M8,12L7,12 7,6 8,6z M6,12L5,12 5,6 6,6z M4,14L11,14 11,4 4,4z" />
+                                            <GeometryDrawing Brush="#FF424242" Geometry="F1M11,4L4,4 4,14 11,14z M6,3L9,3 9,2 6,2z M13,3L13,4 12,4 12,14C12,14.552,11.552,15,11,15L4,15C3.448,15,3,14.552,3,14L3,4 2,4 2,3 5,3 5,2C5,1.448,5.448,1,6,1L9,1C9.552,1,10,1.448,10,2L10,3z M10,6L9,6 9,12 10,12z M8,6L7,6 7,12 8,12z M6,12L5,12 5,6 6,6z" />
+                                        </DrawingGroup.Children>
+                                    </DrawingGroup>
+                                </DrawingBrush.Drawing>
+                            </DrawingBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Viewbox>
+            </Button>
+
+        </Grid>
     </Grid>
 </Window>

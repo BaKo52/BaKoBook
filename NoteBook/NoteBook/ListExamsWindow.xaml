@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM"
         mc:Ignorable="d"
-        Title="Liste des examens" Height="600" Width="800">
+        Title="Liste des examens" Height="600" Width="800" Background="#003366">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
-		<ListView Margin="30,30,30,30" Grid.Row="0" x:Name="exams" ItemsSource="{Binding note}" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" >
+
+        <ListView Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" Margin="30,30,30,30" Grid.Row="0" x:Name="exams" ItemsSource="{Binding note}" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" >
 			<ListView.View>
 				<GridView>
 					<GridView.Columns>
@@ -22,9 +22,9 @@
 								<Label Content="Module" HorizontalContentAlignment="Center"/>
 							</GridViewColumn.Header>
 							<GridViewColumn.CellTemplate>
-								<DataTemplate>
-									<Label Content="{Binding Module.Name}" HorizontalAlignment="Center"/>
-								</DataTemplate>
+                                <DataTemplate>
+                                    <Label Foreground="#ffa6d0" Content="{Binding Module.Name}" HorizontalAlignment="Center"/>
+                                </DataTemplate>
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
 
@@ -33,9 +33,9 @@
 								<Label Content="Professeur" HorizontalContentAlignment="Center"/>
 							</GridViewColumn.Header>
 							<GridViewColumn.CellTemplate>
-								<DataTemplate>
-									<Label Content="{Binding Teacher}" HorizontalAlignment="Center"/>
-								</DataTemplate>
+                                <DataTemplate>
+                                    <Label Foreground="#ffa6d0" Content="{Binding Teacher}" HorizontalAlignment="Center"/>
+                                </DataTemplate>
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
 
@@ -44,9 +44,9 @@
 								<Label Content="Note" HorizontalContentAlignment="Center"/>
 							</GridViewColumn.Header>
 							<GridViewColumn.CellTemplate>
-								<DataTemplate>
-									<Label Content="{Binding Note}" HorizontalAlignment="Center"/>
-								</DataTemplate>
+                                <DataTemplate>
+                                    <Label Foreground="#ffa6d0" Content="{Binding Note}" HorizontalAlignment="Center"/>
+                                </DataTemplate>
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
 
@@ -55,9 +55,9 @@
 								<Label Content="Date" HorizontalContentAlignment="Center"/>
 							</GridViewColumn.Header>
 							<GridViewColumn.CellTemplate>
-								<DataTemplate>
-									<Label Content="{Binding DateExam}" HorizontalAlignment="Center"/>
-								</DataTemplate>
+                                <DataTemplate>
+                                    <Label Foreground="#ffa6d0" Content="{Binding DateExam}" HorizontalAlignment="Center"/>
+                                </DataTemplate>
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
 					</GridView.Columns>
@@ -65,18 +65,18 @@
 			</ListView.View>
 		</ListView>
 
-        <ListView Margin="30,30,30,30" Grid.Row="1" x:Name="scores" ItemsSource="{Binding AvgScore}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <ListView Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" Margin="30,30,30,30" Grid.Row="1" x:Name="scores" ItemsSource="{Binding AvgScore}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 			<ListView.View>
 				<GridView>
 					<GridView.Columns>
 						<GridViewColumn Width="365px">
 							<GridViewColumn.Header>
-								<Label Content="Element" HorizontalContentAlignment="Center"/>
+                                <Label Content="Element" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch"/>
 							</GridViewColumn.Header>
 							<GridViewColumn.CellTemplate>
-								<DataTemplate>
-									<Label Content="{Binding PedagoElement}" HorizontalAlignment="Center"/>
-								</DataTemplate>
+                                <DataTemplate>
+                                    <Label Foreground="#ffa6d0" Content="{Binding PedagoElement}" HorizontalAlignment="Center"/>
+                                </DataTemplate>
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
 
@@ -85,9 +85,9 @@
 								<Label Content="Moyenne" HorizontalContentAlignment="Center"/>
 							</GridViewColumn.Header>
 							<GridViewColumn.CellTemplate>
-								<DataTemplate>
-									<Label Content="{Binding Average}" HorizontalAlignment="Center"/>
-								</DataTemplate>
+                                <DataTemplate>
+                                    <Label Foreground="#ffa6d0" Content="{Binding Average}" HorizontalAlignment="Center"/>
+                                </DataTemplate>
 							</GridViewColumn.CellTemplate>
 						</GridViewColumn>
 					</GridView.Columns>
@@ -95,6 +95,6 @@
 			</ListView.View>
 		</ListView>
 
-        <Button Margin="15, 15, 15, 15" Grid.Row="2" Content="Close" Click="Close" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        <Button Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" Margin="65, 15, 65, 15" Grid.Row="2" Content="Close" Click="Close" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 	</Grid>
 </Window>

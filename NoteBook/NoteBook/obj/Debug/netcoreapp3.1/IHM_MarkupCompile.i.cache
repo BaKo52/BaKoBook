@@ -1,19 +1,19 @@
 ﻿IHM
-1.0.0.0
+
 
 winexe
 C#
 .cs
-\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\
 IHM
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\App.xaml
-5514798818
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\App.xaml
+5-1928481434
 
-9-1722465372
-195454413926
+8184383279
+195-523336889
 EditElementWindow.xaml;EditExamWindow.xaml;EditUnitsWindow.xaml;ListExamsWindow.xaml;MainWindow.xaml;
 
 False

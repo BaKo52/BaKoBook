@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UwZvdpVcBkFjIUufJSN8PjzDfR/uQLLRSiF+fZTHX6H6dVRCLITVZx1kMwfy5YPgpslvTWfPAb6N9lnyuVSyLA==",
+  "dgSpecHash": "6gEbBQC5s5GQTK268V+bK2kTYEqdqi3+pDntPQEre65ywTaZvr3pePdN3QSMsIhbu93fTG1sW3IXPXI//jIUIg==",
   "success": true,
-  "projectFilePath": "\\\\iut21.u-bourgogne.fr\\racine\\dijon\\enseignement\\etudiants\\IQ\\IQ-2\\bk296745\\GitHub\\AppProgObjetTP\\NoteBook\\NoteBook\\IHM.csproj",
+  "projectFilePath": "C:\\Users\\bkott\\Documents\\GitHub\\AppProgObjetTP\\NoteBook\\NoteBook\\IHM.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\bk296745\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
+    "C:\\Users\\bkott\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logic", "Logic\Logic.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestLogic", "TestLogic\TestLogic.csproj", "{F11BA766-F9C3-45FB-BC63-428B72CCCE42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage", "Storage\Storage.csproj", "{1EF4D77A-F0FA-4BD2-A4EE-DA6CB15ECF6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Storage", "Storage\Storage.csproj", "{1EF4D77A-F0FA-4BD2-A4EE-DA6CB15ECF6B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupWizard", "SetupWizard\SetupWizard.vdproj", "{4E4FEA29-A35D-4766-9BD8-43A37D1BBC0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,8 @@ Global
 		{1EF4D77A-F0FA-4BD2-A4EE-DA6CB15ECF6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EF4D77A-F0FA-4BD2-A4EE-DA6CB15ECF6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EF4D77A-F0FA-4BD2-A4EE-DA6CB15ECF6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4FEA29-A35D-4766-9BD8-43A37D1BBC0A}.Debug|Any CPU.ActiveCfg = Debug
+		{4E4FEA29-A35D-4766-9BD8-43A37D1BBC0A}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

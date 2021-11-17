@@ -5,21 +5,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM"
         mc:Ignorable="d"
-        Title="Rentrer un examen" Height="450" Width="800">
+        Title="Rentrer un examen" Height="450" Width="800" Background="#003366">
     <Grid>
-        <ComboBox x:Name="moduleBox" HorizontalAlignment="Left" Margin="186,93,0,0" VerticalAlignment="Top" Width="120"/>
-        <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="521,92,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="isAbsentBox" Content="Absent :" HorizontalAlignment="Left" Margin="215,170,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="teacherBox" HorizontalAlignment="Left" Margin="536,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Validate" HorizontalAlignment="Left" Margin="327,389,0,0" VerticalAlignment="Top" Click="Validate"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="422,389,0,0" VerticalAlignment="Top" Click="Cancel"/>
-        <Label Content="Teacher :" HorizontalAlignment="Left" Margin="453,165,0,0" VerticalAlignment="Top"/>
-        <Label Content="Note :" HorizontalAlignment="Left" Margin="119,243,0,0" VerticalAlignment="Top"/>
-        <Label Content="Date :" HorizontalAlignment="Left" Margin="461,91,0,0" VerticalAlignment="Top"/>
-        <Label Content="Module :" HorizontalAlignment="Left" Margin="112,91,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="noteBox" HorizontalAlignment="Left" Margin="186,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Coef :" HorizontalAlignment="Left" Margin="469,252,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="coefBox" HorizontalAlignment="Left" Margin="536,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Viewbox Grid.Column="0">
+                <Label Foreground="#ffa6d0" Content="Module :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Viewbox>
+            <ComboBox Grid.Column="1" Margin="30" x:Name="moduleBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Viewbox Grid.Column="0">
+                <Label Foreground="#ffa6d0" Content="Date :" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </Viewbox>
+            <DatePicker Grid.Column="1" x:Name="datePicker" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Viewbox Grid.Column="0" Grid.Row="2" Margin="30">
+            <CheckBox x:Name="isAbsentBox" Content="Absent" Foreground="#ffa6d0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Viewbox>
+
+        <Grid Grid.Column="1" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Viewbox Grid.Column="0">
+                <Label Foreground="#ffa6d0" Content="Teacher :" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </Viewbox>
+            <TextBox Grid.Column="1" Margin="30" Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" x:Name="teacherBox" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Viewbox>
+                <Label Grid.Column="0" Foreground="#ffa6d0" Content="Note :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Viewbox>
+            <TextBox Grid.Column="1" Margin="30" Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" x:Name="noteBox" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Viewbox>
+                <Label Grid.Column="0" Foreground="#ffa6d0" Content="Coef :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Viewbox>
+            <TextBox Grid.Column="1" Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" Margin="30" x:Name="coefBox" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        </Grid>
+
+        <Button Grid.Column="0" Grid.Row="3" Margin="30" Background="#1a4d80" BorderBrush="#1a4d80" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="Validate">
+            <Viewbox Stretch="Uniform">
+                <Label Foreground="#ffa6d0" Content="Valider"/>
+            </Viewbox>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="3" Margin="30" Background="#1a4d80" BorderBrush="#1a4d80" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="Cancel">
+            <Viewbox Stretch="Uniform">
+                <Label Foreground="#ffa6d0" Content="Annuler"/>
+            </Viewbox>
+        </Button>
     </Grid>
 </Window>

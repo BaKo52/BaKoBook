@@ -5,12 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM"
         mc:Ignorable="d"
-        Title="Editer un élément" Height="450" Width="800">
+        Title="Editer un élément" Height="225" Width="400" Background="#003366" >
     <Grid>
-        <Label Content="Name :" HorizontalAlignment="Left" Margin="224,86,0,0" VerticalAlignment="Top" Height="36" Width="128"/>
-        <Label Content="Coefficient :&#xD;&#xA;" HorizontalAlignment="Left" Margin="224,215,0,0" VerticalAlignment="Top" Height="29" Width="123"/>
-        <TextBox x:Name="coef" HorizontalAlignment="Left" Margin="352,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="29"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Margin="352,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" Height="29"/>
-        <Button Content="Validate" HorizontalAlignment="Center" Margin="0,365,0,0" VerticalAlignment="Top" Click="Validate"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Viewbox Grid.Row="0" Grid.Column="0">
+            <Label Foreground="#ffa6d0" Content="Name :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Viewbox>
+
+        <Viewbox Grid.Row="1" Grid.Column="0">
+            <Label Foreground="#ffa6d0" Content="Coefficient :" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Viewbox>
+
+        <TextBox Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" Grid.Row="1" Grid.Column="1" x:Name="coef" Margin="30, 20, 30, 20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center"  TextWrapping="Wrap"/>
+        <TextBox Foreground="#ffa6d0" Background="#1a4d80" BorderBrush="#1a4d80" Grid.Row="0" Grid.Column="1" x:Name="name" Margin="30, 20, 30, 20" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap"/>
+        <Button Foreground="#ffa6d0" Background="#1a4d80" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Content="Valider"  HorizontalAlignment="Center" VerticalAlignment="Center" Click="Validate"/>
     </Grid>
 </Window>

@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="images\test.gif" />
+    <Compile Remove="icons\**" />
+    <EmbeddedResource Remove="icons\**" />
+    <None Remove="icons\**" />
+    <Page Remove="icons\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="images\img.jpg" />
+    <None Remove="images\kirbyStar.gif" />
     <None Remove="img.png" />
   </ItemGroup>
 
@@ -23,7 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="images\test.gif" />
+    <Resource Include="images\kirbyStar.gif" />
   </ItemGroup>
 
 </Project>

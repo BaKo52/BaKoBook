@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM"
         mc:Ignorable="d"
-        Title="Editer l'élément" Height="450" Width="800">
+        Title="Editer un élément" Height="450" Width="800">
     <Grid>
         <Label Content="Name :" HorizontalAlignment="Left" Margin="224,86,0,0" VerticalAlignment="Top" Height="36" Width="128"/>
         <Label Content="Coefficient :&#xD;&#xA;" HorizontalAlignment="Left" Margin="224,215,0,0" VerticalAlignment="Top" Height="29" Width="123"/>

@@ -22,3 +22,15 @@ C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netco
 C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.csproj.CopyComplete
 C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.dll
 C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.pdb
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Storage.deps.json
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Storage.dll
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Storage.pdb
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Logic.dll
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\bin\Debug\netcoreapp3.1\Logic.pdb
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.csproj.AssemblyReference.cache
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.AssemblyInfoInputs.cache
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.AssemblyInfo.cs
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.csproj.CoreCompileInputs.cache
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.csproj.CopyComplete
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.dll
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\Storage\obj\Debug\netcoreapp3.1\Storage.pdb

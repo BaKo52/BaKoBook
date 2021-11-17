@@ -32,7 +32,7 @@ namespace Storage
         /// <param name="name"></param>
         public JsonStorage(String name)
         {
-            filename = name;
+            filename = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + name;
             ser = new DataContractJsonSerializer(typeof(Notebook));
         }
 

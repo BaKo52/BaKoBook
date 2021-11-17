@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM"
         mc:Ignorable="d"
-        Title="Liste des examens de l'élève" Height="600" Width="800">
-	<Grid Width="800" Height="590" VerticalAlignment="Top">
-		<ListView x:Name="exams" ItemsSource="{Binding note}" Margin="30,30,30,0" HorizontalContentAlignment="Stretch" Height="250" VerticalAlignment="Top" Width="739" Grid.Row="1" >
+        Title="Liste des examens" Height="600" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+		<ListView Margin="30,30,30,30" Grid.Row="0" x:Name="exams" ItemsSource="{Binding note}" HorizontalContentAlignment="Stretch" VerticalAlignment="Stretch" >
 			<ListView.View>
 				<GridView>
 					<GridView.Columns>
@@ -59,7 +65,7 @@
 			</ListView.View>
 		</ListView>
 
-		<ListView x:Name="scores" ItemsSource="{Binding AvgScore}" Margin="30,300,30,95" HorizontalContentAlignment="Stretch" >
+        <ListView Margin="30,30,30,30" Grid.Row="1" x:Name="scores" ItemsSource="{Binding AvgScore}" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 			<ListView.View>
 				<GridView>
 					<GridView.Columns>
@@ -88,6 +94,7 @@
 				</GridView>
 			</ListView.View>
 		</ListView>
-		<Button Content="Close" Margin="375,510,375,0" Click="Close" Height="40" VerticalAlignment="Top"/>
+
+        <Button Margin="15, 15, 15, 15" Grid.Row="2" Content="Close" Click="Close" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
 	</Grid>
 </Window>

@@ -114,3 +114,7 @@ C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netco
 C:\Users\bkott\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\IHM.genruntimeconfig.cache
 C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\bin\Debug\netcoreapp3.1\Storage.dll
 C:\Users\Elève\Documents\GitHub\AppProgObjetTP\NoteBook\NoteBook\bin\Debug\netcoreapp3.1\Storage.pdb
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\bin\Debug\netcoreapp3.1\Storage.dll
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\bin\Debug\netcoreapp3.1\Storage.pdb
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\obj\Debug\netcoreapp3.1\App.baml
+\\iut21.u-bourgogne.fr\racine\dijon\enseignement\etudiants\IQ\IQ-2\bk296745\GitHub\AppProgObjetTP\NoteBook\NoteBook\bin\Debug\netcoreapp3.1\WpfAnimatedGif.dll

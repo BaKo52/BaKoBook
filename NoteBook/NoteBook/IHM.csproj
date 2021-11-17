@@ -4,10 +4,17 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>nlyl_notebook.ico</ApplicationIcon>
+    <Win32Resource></Win32Resource>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\test.gif" />
     <None Remove="img.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="img.png" />
+    <Resource Include="images\test.gif" />
   </ItemGroup>
 
 </Project>

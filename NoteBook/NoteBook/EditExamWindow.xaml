@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IHM"
         mc:Ignorable="d"
-        Title="Rentre un examen" Height="450" Width="800">
+        Title="Rentrer un examen" Height="450" Width="800">
     <Grid>
         <ComboBox x:Name="moduleBox" HorizontalAlignment="Left" Margin="186,93,0,0" VerticalAlignment="Top" Width="120"/>
         <DatePicker x:Name="datePicker" HorizontalAlignment="Left" Margin="521,92,0,0" VerticalAlignment="Top"/>
